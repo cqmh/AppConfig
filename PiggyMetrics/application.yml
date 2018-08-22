@@ -17,7 +17,7 @@ eureka:
     lease-renewal-interval-in-seconds: 10
   client:
     serviceUrl:
-      defaultZone: http://${REGISTRY_HOST}:${REGISTRY_PORT}/eureka/
+      defaultZone: http://registry:8761/eureka/
       healthcheck:
         enabled: true
 
@@ -28,7 +28,7 @@ security:
 
 spring:
   rabbitmq:
-    host: ${RBMQ_HOST}
+    host: rabbitmq
 
 management:
   security:
