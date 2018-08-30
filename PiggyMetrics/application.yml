@@ -21,10 +21,10 @@ eureka:
       healthcheck:
         enabled: true
 
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://${AUTH_HOST}:${AUTH_PORT}/uaa/users/current
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://auth-service:5000/uaa/users/current
 
 spring:
   rabbitmq:
