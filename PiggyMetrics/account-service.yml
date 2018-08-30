@@ -1,11 +1,11 @@
-security:
-  oauth2:
-    client:
-      clientId: account-service
-      clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
-      accessTokenUri: http://${AUTH_HOST}:${AUTH_PORT}/uaa/oauth/token
-      grant-type: client_credentials
-      scope: server
+#security:
+#  oauth2:
+#    client:
+#      clientId: account-service
+#      clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
+#      accessTokenUri: http://${AUTH_HOST}:${AUTH_PORT}/uaa/oauth/token
+#      grant-type: client_credentials
+#      scope: server
 
 spring:
   data:
@@ -15,6 +15,7 @@ spring:
       password: ${MONGODB_PASSWORD}
       database: piggymetrics
       port: ${MONGODB_PORT}
+  version: account-service-v1.0
 
 server:
   context-path: /accounts
