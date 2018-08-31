@@ -1,0 +1,30 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://registry:8761/eureka/
+      healthcheck:
+        enabled: true
+
+spring:
+  rabbitmq:
+    host: rabbitmq
+
+management:
+  security:
+    enabled: false

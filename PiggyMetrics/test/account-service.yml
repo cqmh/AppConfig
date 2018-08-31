@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      host: mongo
+      username: user
+      password: passw0rd
+      database: piggymetrics
+      port: 27017
+  version: account-service-v1.0
+
+server:
+  context-path: /accounts
+  port: 6000
