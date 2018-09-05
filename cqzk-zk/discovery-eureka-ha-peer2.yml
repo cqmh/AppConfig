@@ -15,7 +15,9 @@ eureka:
   instance:
     hostname: peer2
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
-#    ${spring.application.name}:${server.port}
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
   client:
 #    register-with-eureka: false
 #    fetch-registry: false
