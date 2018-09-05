@@ -13,7 +13,7 @@ eureka:
   datacenter: SpringCloud-CQZK   # 修改 Eureka 首页上面 System Status 的 Data center 显示信息
   environment: dev         # 修改 Eureka 首页上面 System Status 的 Environment 显示信息
   instance:
-    hostname: peer3
+    hostname: ${spring.cloud.client.ipAddress}
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
   server:
     enable-self-preservation: false
