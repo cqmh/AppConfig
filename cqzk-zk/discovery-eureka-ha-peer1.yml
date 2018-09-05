@@ -1,0 +1,24 @@
+# 配置 eureka 登录密码，登录时需要输入这个用户名密码登录进去
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+server:
+  port: 8401
+ 
+eureka:
+  datacenter: SpringCloud-CQZK   # 修改 Eureka 首页上面 System Status 的 Data center 显示信息
+  environment: dev         # 修改 Eureka 首页上面 System Status 的 Environment 显示信息
+  instance:
+    hostname: peer1
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+#    ${spring.application.name}:${server.port}
+  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+    service-url:
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8402/eureka,http://admin:admin@${spring.cloud.client.ipAddress}:8403/eureka
+

@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: http://admin:admin@${spring.cloud.client.ipAddress}:8401/eureka,http://admin:admin@${spring.cloud.client.ipAddress}:8402/eureka,http://admin:admin@${spring.cloud.client.ipAddress}:8403/eureka
+      healthcheck:
+        enabled: true
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
