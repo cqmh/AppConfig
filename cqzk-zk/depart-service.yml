@@ -4,7 +4,7 @@ server:
 # mybatis mapper xml 配置
 mybatis:
   # mybatis.type-aliases-package：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名
-  type-aliases-package:
+  type-aliases-package: cn.com.cqzk.zk.entity
   mapper-locations: classpath:mybatis/mapper/*.xml
   config-location: classpath:mybatis/mybatis.cfg.xml
     
