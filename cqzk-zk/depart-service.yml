@@ -15,6 +15,13 @@ spring:
     url: jdbc:oracle:thin:@172.16.5.130:1521:ORCL
     username: doc
     password: doc
+
+# rabbitmq 配置：
+  rabbitmq:
+    host: 10.10.107.115   # 登录 Rabbitmq 后台管理页面地址为：http://localhost:15672
+    port: 5672
+    username: guest   # 默认账户
+    password: guest   # 默认密码
       
 eureka:
   instance:
